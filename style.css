@@ -87,7 +87,7 @@ h1 {
     bottom: -20%;
     right: -25%;
     background-color: #b3588a;
-    animation: fyPlus 8s linear infinite;
+    animation: flyPlus 8s linear infinite;
     transform: rotate(0) translate(100px) rotate(0);
 }
 
