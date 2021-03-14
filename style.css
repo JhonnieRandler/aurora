@@ -1,0 +1,98 @@
+@keyframes fly {
+    100% {
+        transform: rotate(1turn) translate(100px) rotate(-1turn);
+    }
+}
+
+@keyframes flyPlus {
+    100% {
+        transform: rotate(-1turn) translate(100px) rotate(1turn);
+    }
+}
+body, html {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.morph {
+    font-family: Arial;
+    margin: 0;
+    background: rgba(255, 255, 255, 0.3);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-size: 45px;
+    font-weight: 500;
+    text-transform: uppercase;
+    z-index: 4;
+}
+
+.glass {
+    color: #ecf0f1;
+    border-radius: 8px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    border: solid 1px rgba(255, 255, 255, .3);
+    background-clip: padding-box;
+    backdrop-filter: blur(10px);
+    z-index: 4;
+}
+
+.wrapper {
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    position: absolute;
+    top: 0;
+    overflow: hidden;
+}
+
+.base {
+    position: absolute;
+    filter: blur(60px);
+    opacity: 0.8;
+}
+
+.one {
+    border-radius: 100%;
+    width: 150%;
+    height: 150%;
+    background-color: #373372;
+    left: -10%;
+    top: -75%;
+    z-index: 3;
+    animation: fly 12s linear infinite;
+    transform: rotate(0) translate(80px) rotate(0);
+}
+
+.two {
+    width: 125%;
+    height: 200%;
+    background-color: #7c336c;
+    bottom: -7.5%;
+    left: -20%;
+}
+
+.three {
+    border-radius: 100%;
+    width: 112.5%;
+    height: 112.5%;
+    bottom: -20%;
+    right: -25%;
+    background-color: #b3588a;
+    animation: fyPlus 8s linear infinite;
+    transform: rotate(0) translate(100px) rotate(0);
+}
+
+@media screen and (max-width: 730px) {
+    h1 {
+        font-size: 20px;
+    }
+}
